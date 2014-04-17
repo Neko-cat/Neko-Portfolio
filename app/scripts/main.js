@@ -89,7 +89,7 @@ $(document).ready(function(){
 	});
 
 	/*
-	*	Aimation on bandellette and menu Item.
+	*	Aimation on bandelette and menu Item.
 	*/
 	$('#menu a').click(function(){
 		$('html, body').animate({

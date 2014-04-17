@@ -12,18 +12,11 @@
     src: url('Dekar.ttf');
 }
 
+
 body{
 	// min-width: 2400px;
 }
 
-#scrollspy {
-	position: fixed;
-	left: 50%;
-	width: 2px;
-	top: 0;
-	bottom: 0;
-	background-color: red;
-}
 
 #test {
 	position: fixed;
@@ -145,16 +138,10 @@ footer p {
 }
 #slide2 {
 	float: left;
+	background-color: black;
 }
 #slide3 {
 	float: left;
-}
-
-#slide2 h1 {
-	width: 70%;
-	margin: 40px auto 0 auto;
-	color: white;
-	box-shadow: 0 -1px 0 rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.1);
 }
 
 /*
@@ -172,6 +159,7 @@ footer p {
 	-moz-border-radius-bottomleft: 10px;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+	z-index: 100;
 }
 
 #menu ul {
@@ -238,45 +226,185 @@ footer p {
 	opacity: 0.4;
 }
 
-.content {
-	width: 768px;
-	height: 400px;
-	margin: 50px auto 0 auto;
+/* Slide 2 v.2 */
+
+.content-box {
+	display: table;
+	height: 620px;
+	background-color: black;
+}
+
+.content-box-bot {
+	height: 200px;
+	display: table-cell;
+	background-color: black;
+}
+
+ /* Colonnes */
+
+.col1 {
+	display: table-cell;
+	width: 400px;
+	height: 620px;
+}
+
+.col2 {
+	display: table-cell;
+	width: 500px;
+	height: 620px;
+}
+
+.col3 {
+	display: table-cell;
+	width: 450px;
+	height: 620px;
+}
+
+.col4 {
+	display: table-cell;
+	width: 600px;
+	height: 620px;
+}
+
+.col5 {
+	display: table-cell;
+	width: 400px;
+	height: 275px;
+}
+
+.col6 {
+	display: table-cell;
+	width: 500px;
+	height: 275px;
+}
+
+.col7 {
+	display: table-cell;
+	width: 450px;
+	height: 275px;
+}
+
+.col8 {
+	display: table-cell;
+	width: 600px;
+	height: 275px;
+}
+
+/* Contenu de la colonne 1 */
+
+.box1 {
+	height: 320px;
+	background-color: black;
+}
+
+.box2 {
+	height: 300px;
+	background: url("../images/cat.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 2 */
+
+.box3 {
+	height: 320px;
+	background-color: orange;
+}
+
+.box4 {
+	height: 300px;
+	background-color: green;
+}
+
+/* Contenu de la colonne 3 */
+
+.box5 {
+	height: 320px;
+	background-color: cyan;
+}
+
+.box6 {
+	height: 300px;
+	background-color: yellow;
+}
+
+/* Contenu de la colonne 4 */
+
+.box7 {
+	height: 320px;
+	background-color: darkred;
+}
+
+.box8 {
+	height: 300px;
+	background-color: magenta;
+}
+
+/* Contenu de la colonne 5 */
+
+.box9 {
+	height: 320px;
+	background-color: darkred;
+}
+
+/* Contenu de la colonne 6 */
+
+.box10 {
+	height: 320px;
+	background-color: pink;
+}
+
+/* Contenu de la colonne 7 */
+
+.box11 {
+	height: 320px;
+	background-color: purple;
+}
+
+/* Contenu de la colonne 8 */
+
+.box12 {
+	height: 320px;
+	background-color: grey;
+}
+
+
+/* Barre */
+
+.title {
+	width: 100%;
+	height: 35px;
+}
+
+.barre {
+	display: inline-block;
+	width: 80%;
+	height: 35px;
 	background-color: white;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-/* 	opacity: 0.7; */
-	padding: 10px;
 }
 
-.content img {
-	width: 150px;
-	height: 80px;
-}
-
-.content a {
-	position: relative;
-	left: 350px;
-	text-decoration: none;
-	background-color: white;
-	color: black;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	box-shadow: #282828 -2px 2px 13px 2px inset;
-	padding: 10px;
-	position: relative;
-	top: 20px;
-}
-
-.content a:hover {
-	color: chartreuse;
-}
-
-/* Slide 3 */
-
-#slide3 h1 {
+.title h1 {
 	color: white;
-	box-shadow: 0 -1px 0 rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.1);
+	font-size: 25px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Anim CSS */
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover,.box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
