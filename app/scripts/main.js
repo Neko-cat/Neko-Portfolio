@@ -28,7 +28,7 @@ $(document).ready(function(){
 		$('#slide2').css('height', $(window).height());
 		$('#slide3').css('width', $(window).width());
 		$('#slide3').css('height', $(window).height());
-		$('body').css('width', $(window).width() * numberOfSlides);
+		$('body').css('width', $(window).width() * numberOfSlides) ;
 	} else {
 		$('#slide1').css('width', slideswidth);
 		$('#slide1').css('height', $(window).height());
@@ -36,7 +36,7 @@ $(document).ready(function(){
 		$('#slide2').css('height', $(window).height());
 		$('#slide3').css('width', slideswidth);
 		$('#slide3').css('height', $(window).height());
-		$('body').css('width', slideswidth * numberOfSlides);
+		$('body').css('width', slideswidth * numberOfSlides) ;
 	}
 		// Do the same on window resize
 	$(window).resize(function() {
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			$('#slide2').css('height', $(window).height());
 			$('#slide3').css('width', $(window).width());
 			$('#slide3').css('height', $(window).height());
-			$('body').css('width', $(window).width() * numberOfSlides);
+			$('body').css('width', $(window).width() * numberOfSlides) ;
 		} else {
 			$('#slide1').css('width', slideswidth);
 			$('#slide1').css('height', $(window).height());
@@ -55,32 +55,37 @@ $(document).ready(function(){
 			$('#slide2').css('height', $(window).height());
 			$('#slide3').css('width', slideswidth);
 			$('#slide3').css('height', $(window).height());
-			$('body').css('width', slideswidth * numberOfSlides);
+			$('body').css('width', slideswidth * numberOfSlides) ;
 		}
 	});
 
 	/*
-	*	Bandelette opacity
+	*	Bandelette
 	*/
+
+	// Bandelette opacity
 	$('#bandelette').hover(function(){
 		$('#opacity').stop().fadeTo('slow', 0.8);
 	}, function() {
 		$('#opacity').stop().fadeTo('slow', 0.6);
 	});
 
-	/*
-	*	Link
-	*/
-		// link animation
+	//	Bandelette Link
 	$('#bandelette li').hover(function(){
 		$(this).children('.rond').addClass('rond-hover');
 	}, function(){
 		$(this).children('.rond').removeClass('rond-hover');
 	});
 
-	/*
-	* pixelart animation
-	*/
+	//	Bandelette onload
+	$('#opacity').css('margin-top', -$('#opacity').height() + 'px' );
+	$('#opacity').animate({
+		marginTop: 0
+	}, 2000, 'easeOutCirc', function() {
+		$('#menu').fadeIn(1000);
+	});
+
+	// Bandelette pixel art
 	$('.pixel').mouseenter(function(){
 		$(this).fadeTo('fast', 0.4);
 	});
@@ -88,9 +93,7 @@ $(document).ready(function(){
 		$(this).fadeTo('fast', 1);
 	});
 
-	/*
-	*	Aimation on bandelette and menu Item.
-	*/
+	// Animation on bandelette and item menu
 	$('#menu a').click(function(){
 		$('html, body').animate({
 			scrollLeft: $($(this).attr('href')).offset().left
