@@ -69,6 +69,12 @@ body {
 	border-bottom-left-radius: 20px;
 
 }
+a {
+	margin: 0;
+	text-decoration: none;
+	padding: 0;
+	color: red;
+}
 #bandelette {
 	padding: 10px;
 	padding-bottom: 100px;
@@ -77,6 +83,7 @@ body {
 	margin: 0 auto;
 }
 
+/* background bandelette */
 
 /* Rond */
 
@@ -138,6 +145,7 @@ footer p {
 	float: left;
 }
 #slide2 {
+	height: 800px;
 	float: left;
 	background-color: black;
 }
@@ -232,13 +240,13 @@ footer p {
 
 .content-box {
 	display: table;
-	height: 620px;
+	height: 62%;
 	background-color: black;
 }
 
 .content-box-bot {
-	height: 200px;
-	display: table-cell;
+	height: 34.3%;
+	display: table;
 	background-color: black;
 }
 
@@ -247,129 +255,173 @@ footer p {
 .col1 {
 	display: table-cell;
 	width: 400px;
-	height: 620px;
+	height: 100%;
 }
 
 .col2 {
 	display: table-cell;
 	width: 500px;
-	height: 620px;
+	height: 100%;
 }
 
 .col3 {
 	display: table-cell;
 	width: 450px;
-	height: 620px;
+	height: 100%;
 }
 
 .col4 {
 	display: table-cell;
 	width: 600px;
-	height: 620px;
+	height: 100%;
 }
 
 .col5 {
 	display: table-cell;
 	width: 400px;
-	height: 275px;
+	height: 100%;
 }
 
 .col6 {
 	display: table-cell;
 	width: 500px;
-	height: 275px;
+	height: 100%;
 }
 
 .col7 {
 	display: table-cell;
 	width: 450px;
-	height: 275px;
+	height: 100%;
 }
 
 .col8 {
 	display: table-cell;
 	width: 600px;
-	height: 275px;
+	height: 100%;
 }
 
 /* Contenu de la colonne 1 */
 
 .box1 {
-	height: 320px;
-	background-color: black;
-}
-
-.box2 {
-	height: 300px;
-	background: url("../images/cat.jpg") no-repeat center center; 
+	height: 70%;
+	background: url("../images/photo.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 
+.box2 {
+	height: 30%;
+	background: url("../images/photo2.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} 
+
 /* Contenu de la colonne 2 */
 
 .box3 {
-	height: 320px;
-	background-color: orange;
+	height: 50%;
+	background: url("../images/photo3.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .box4 {
-	height: 300px;
-	background-color: green;
+	height: 50%;
+	background: url("../images/photo4.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 3 */
 
 .box5 {
-	height: 320px;
-	background-color: cyan;
+	height: 50%;
+	background: url("../images/photo5.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .box6 {
-	height: 300px;
-	background-color: yellow;
+	height: 50%;
+	background: url("../images/photo6.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 4 */
 
 .box7 {
-	height: 320px;
-	background-color: darkred;
+	height: 50%;
+	background: url("../images/photo7.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .box8 {
-	height: 300px;
-	background-color: magenta;
+	height: 50%;
+	background: url("../images/photo8.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 5 */
 
 .box9 {
-	height: 320px;
-	background-color: darkred;
+	height: 100%;
+	background: url("../images/photo9.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 6 */
 
 .box10 {
-	height: 320px;
-	background-color: pink;
+	height: 100%;
+	background: url("../images/photo10.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 7 */
 
 .box11 {
-	height: 320px;
-	background-color: purple;
+	height: 100%;
+	background: url("../images/photo11.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Contenu de la colonne 8 */
 
 .box12 {
-	height: 320px;
-	background-color: grey;
+	height: 100%;
+	background: url("../images/photo12.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 
@@ -385,6 +437,12 @@ footer p {
 	width: 80%;
 	height: 35px;
 	background-color: white;
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 .title h1 {

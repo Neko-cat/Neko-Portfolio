@@ -14,48 +14,49 @@ $(document).ready(function(){
 	// Help properly set the body width value.
 	var numberOfSlides	= 3;
 	// Slides Width in px
-	var slideswidth		= 800;
+	var minwidth		= 800;
+	var minheight		= 600;
 
 	/*
 	* 	Set viewport width and height to each slide.
 	*	Set the min width of each slide to 800px
 	* 		Yep that's dirty jQuery
 	*/
-	if ($(window).width() >= slideswidth ) {
+	if ($(window).width() >= minwidth || $(window).height() >= minheight ) {
 		$('#slide1').css('width', $(window).width());
 		$('#slide1').css('height', $(window).height());
 		$('#slide2').css('width', $(window).width());
 		$('#slide2').css('height', $(window).height());
 		$('#slide3').css('width', $(window).width());
 		$('#slide3').css('height', $(window).height());
-		$('body').css('width', $(window).width() * numberOfSlides) ;
+		$('body').css('width', $(window).width() * numberOfSlides);
 	} else {
-		$('#slide1').css('width', slideswidth);
-		$('#slide1').css('height', $(window).height());
-		$('#slide2').css('width', slideswidth);
-		$('#slide2').css('height', $(window).height());
-		$('#slide3').css('width', slideswidth);
-		$('#slide3').css('height', $(window).height());
-		$('body').css('width', slideswidth * numberOfSlides) ;
+		$('#slide1').css('width', minwidth);
+		$('#slide1').css('height', minheight);
+		$('#slide2').css('width', minwidth);
+		$('#slide2').css('height', minheight);
+		$('#slide3').css('width', minwidth);
+		$('#slide3').css('height', minheight);
+		$('body').css('width', minwidth * numberOfSlides);
 	}
 		// Do the same on window resize
 	$(window).resize(function() {
-		if ($(window).width() >= slideswidth ) {
+		if ($(window).width() >= minwidth ) {
 			$('#slide1').css('width', $(window).width());
 			$('#slide1').css('height', $(window).height());
 			$('#slide2').css('width', $(window).width());
 			$('#slide2').css('height', $(window).height());
 			$('#slide3').css('width', $(window).width());
 			$('#slide3').css('height', $(window).height());
-			$('body').css('width', $(window).width() * numberOfSlides) ;
+			$('body').css('width', $(window).width() * numberOfSlides);
 		} else {
-			$('#slide1').css('width', slideswidth);
-			$('#slide1').css('height', $(window).height());
-			$('#slide2').css('width', slideswidth);
-			$('#slide2').css('height', $(window).height());
-			$('#slide3').css('width', slideswidth);
-			$('#slide3').css('height', $(window).height());
-			$('body').css('width', slideswidth * numberOfSlides) ;
+			$('#slide1').css('width', minwidth);
+			$('#slide1').css('height', minheight);
+			$('#slide2').css('width', minwidth);
+			$('#slide2').css('height', minheight);
+			$('#slide3').css('width', minwidth);
+			$('#slide3').css('height', minheight);
+			$('body').css('width', minwidth * numberOfSlides);
 		}
 	});
 
