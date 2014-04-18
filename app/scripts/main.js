@@ -64,26 +64,27 @@ $(document).ready(function(){
 	*	Bandelette
 	*/
 
-	// Bandelette opacity
-	$('#bandelette').hover(function(){
-		$('#opacity').stop().fadeTo('slow', 0.8);
-	}, function() {
-		$('#opacity').stop().fadeTo('slow', 0.6);
-	});
-
-	//	Bandelette Link
-	$('#bandelette li').hover(function(){
-		$(this).children('.rond').addClass('rond-hover');
-	}, function(){
-		$(this).children('.rond').removeClass('rond-hover');
-	});
-
 	//	Bandelette onload
 	$('#opacity').css('margin-top', -$('#opacity').height() + 'px' );
 	$('#opacity').animate({
 		marginTop: 0
 	}, 2000, 'easeOutCirc', function() {
 		$('#menu').fadeIn(1000);
+		
+		// Bandelette opacity
+		$('#bandelette').hover(function(){
+			$('#opacity').stop().fadeTo('slow', 0.8);
+		}, function() {
+			$('#opacity').stop().fadeTo('slow', 0.6);
+		});
+
+		//	Bandelette Link
+		$('#bandelette li').hover(function(){
+			$(this).children('.rond').addClass('rond-hover');
+		}, function(){
+			$(this).children('.rond').removeClass('rond-hover');
+		});
+
 	});
 
 	// Bandelette pixel art
@@ -99,7 +100,7 @@ $(document).ready(function(){
 		$('html, body').animate({
 			scrollLeft: $($(this).attr('href')).offset().left
 		});
-		hash($(this).attr('href'));
+		// hash($(this).attr('href'));
 	});
 	$('#bandelette li').click(function(){
 		$('html, body').animate({
@@ -133,8 +134,24 @@ $(document).ready(function(){
 			id = scrolledId;
 			$('#menu li a').removeClass('current');
 			$('#menu li a[href="#' + scrolledId +'"]').addClass('current');
+			hash('#' +scrolledId);
 		}
 	});
+
+	/*
+	*	Text when hovering an image
+	*/
+	$('.box').hover(function(){
+		console.log($(this));
+		$(this).stop().animate({
+			
+		}, 1000, function() {
+			/* stuff to do after animation is complete */
+		});
+	}, function(){
+
+	});
+
 
 });
 	// body background slideshow
