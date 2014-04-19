@@ -69,8 +69,10 @@ $(document).ready(function(){
 	$('#opacity').animate({
 		marginTop: 0
 	}, 2000, 'easeOutCirc', function() {
+		// Loading Menu
 		$('#menu').fadeIn(1000);
 		
+			// Charging bandelette animation at the end of the "onload" animation to prenvent it from stopping in the middle of the page.
 		// Bandelette opacity
 		$('#bandelette').hover(function(){
 			$('#opacity').stop().fadeTo('slow', 0.8);
@@ -142,14 +144,9 @@ $(document).ready(function(){
 	*	Text when hovering an image
 	*/
 	$('.box').hover(function(){
-		console.log($(this));
-		$(this).stop().animate({
-			
-		}, 1000, function() {
-			/* stuff to do after animation is complete */
-		});
+		$(this).children().stop().fadeTo(1000, 1);
 	}, function(){
-
+		$(this).children().stop().fadeTo(1000, 0);
 	});
 
 
