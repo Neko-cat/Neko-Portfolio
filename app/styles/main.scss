@@ -12,6 +12,13 @@
     src: url('Dekar.ttf');
 }
 
+/*
+*	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*	apply a natural box layout model to all elements
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
 
 body{
 	// min-width: 2400px;
@@ -204,38 +211,6 @@ footer p {
 	background-color: darkblue;
 }
 
-.box h3 {
-	text-align: center;
-	color: darkred;
-}
-
-
-#boxing, #boxing2 {
-	width: 200px;
-	display: table-cell;
-	text-align: justify;
-}
-
-
-.box p {
-	box-shadow: 0 -1px 0 rgba(0,0,0,0.1) inset, 0 1px 0 rgba(255,255,255,0.1);
-	text-align: center;
-	color: darkred;
-}
-
-.box a {
-	text-decoration: none;
-	color: black;
-	margin-left: 45px;
-}
-
-.box a:hover {
-	text-decoration: none;
-	color: grey;
-	margin-left: 45px;
-	opacity: 0.4;
-}
-
 /* Slide 2 v.2 */
 
 .content-box {
@@ -310,6 +285,7 @@ footer p {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
 
 .box2 {
 	height: 30%;
@@ -443,6 +419,7 @@ footer p {
 	-moz-border-radius-bottomright: 20px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
+	border: solid 1.75px dodgerblue;
 }
 
 .title h1 {
@@ -464,7 +441,26 @@ footer p {
 }
 
 .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover,.box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover {
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
+
+}
+
+	// Javascript class
+.box p{
+	display: block;
+	position: relative;
+	width: 80%;
+	height: 20%;
+	top : 10%;
+	margin: 0 auto;
+	padding: 5px;
+	color: black;
+	opacity: 0;
+	background-color: ghostwhite;
+	box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-top: solid 3px dodgerblue;
+	border-bottom: solid 3px dodgerblue;
+	text-align: center;
 }
