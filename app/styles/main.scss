@@ -80,7 +80,6 @@ a {
 	margin: 0;
 	text-decoration: none;
 	padding: 0;
-	color: red;
 }
 #bandelette {
 	padding: 10px;
@@ -450,9 +449,28 @@ footer p {
 	top : 10%;
 	margin: 0;
 	padding: 5px;
-	border: solid 1px red;
 	color: white;
 	opacity: 0;
 	background-color: black;
 	box-sizing: border-box;
+}
+
+/* 
+*	Fancybox
+*/
+// make navigation always visible and put them outside the area
+.fancybox-nav span {
+    visibility: visible;
+}
+
+.fancybox-nav {
+    width: 80px;
+}
+
+.fancybox-prev {
+    left: -80px;
+}
+
+.fancybox-next {
+    right: -80px;
 }
