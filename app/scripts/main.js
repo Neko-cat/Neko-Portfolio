@@ -149,7 +149,20 @@ $(document).ready(function(){
 		$(this).children().stop().fadeTo(1000, 0);
 	});
 
+	/*
+	*	Fancybox
+	*	https://github.com/fancyapps/fancyBox
+	*/
 
+	// Fancybox photography
+	$('.photography').fancybox({
+		helpers : {
+			thumbs : {
+				width  : 100,
+				height : 100
+			}
+		}
+	});
 });
 	// body background slideshow
 $.backstretch([
