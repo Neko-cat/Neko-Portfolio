@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'King3,serif';
-    src: url('Kingthings_Foundation.ttf');
+    src: url('Kingthings_Foundation.otf');
 }
 
 @font-face {
@@ -83,11 +83,12 @@ a {
 	color: red;
 }
 #bandelette {
-	padding: 10px;
+	padding: 7px;
 	padding-bottom: 100px;
 	width: 250px;
 	height: 100%;
 	margin: 0 auto;
+	text-align: justify;
 }
 
 /* background bandelette */
@@ -151,13 +152,31 @@ footer p {
 #slide1 {
 	float: left;
 }
+
 #slide2 {
 	height: 800px;
 	float: left;
 	background-color: black;
 }
+
 #slide3 {
 	float: left;
+	background-color: black;
+}
+
+#slide4 {
+	float: left;
+	background-color: black;
+}
+
+#slide5 {
+	float: left;
+	background-color: black;
+}
+
+#slide6 {
+	float: left;
+	background-color: black;
 }
 
 /*
@@ -191,7 +210,7 @@ footer p {
 	list-style: none;
 }
 
-#menu li:nth-child(2), #menu li:nth-child(3){
+#menu li:nth-child(2), #menu li:nth-child(3), #menu li:nth-child(4), #menu li:nth-child(5) {
 	box-shadow: 1px 0px 0 rgba(0,0,0,0.1) inset, 1px 0px 0 rgba(255,255,255,0.1);
 }
 
@@ -208,7 +227,9 @@ footer p {
 }
 // Curent
 .current {
-	background-color: darkblue;
+	position: relative;
+	top: 6px;
+	border-top: solid 1.5px white;
 }
 
 /* Slide 2 v.2 */
@@ -229,7 +250,7 @@ footer p {
 
 .col1 {
 	display: table-cell;
-	width: 400px;
+	width: 450px;
 	height: 100%;
 }
 
@@ -241,13 +262,13 @@ footer p {
 
 .col3 {
 	display: table-cell;
-	width: 450px;
+	width: 500px;
 	height: 100%;
 }
 
 .col4 {
 	display: table-cell;
-	width: 600px;
+	width: 500px;
 	height: 100%;
 }
 
@@ -259,27 +280,45 @@ footer p {
 
 .col6 {
 	display: table-cell;
-	width: 500px;
+	width: 400px;
 	height: 100%;
 }
 
 .col7 {
 	display: table-cell;
-	width: 450px;
+	width: 260px;
 	height: 100%;
 }
 
 .col8 {
 	display: table-cell;
-	width: 600px;
+	width: 260px;
+	height: 100%;
+}
+
+.col9 {
+	display: table-cell;
+	width: 260px;
+	height: 100%;
+}
+
+.col10 {
+	display: table-cell;
+	width: 260px;
+	height: 100%;
+}
+
+.col11 {
+	display: table-cell;
+	width: 260px;
 	height: 100%;
 }
 
 /* Contenu de la colonne 1 */
 
 .box1 {
-	height: 70%;
-	background: url("../images/photo.jpg") no-repeat center center; 
+	height: 50%;
+	background: url("../images/photos/photo12.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -288,8 +327,8 @@ footer p {
 
 
 .box2 {
-	height: 30%;
-	background: url("../images/photo2.jpg") no-repeat center center; 
+	height: 50%;
+	background: url("../images/photos/photo13.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -300,7 +339,7 @@ footer p {
 
 .box3 {
 	height: 50%;
-	background: url("../images/photo3.jpg") no-repeat center center; 
+	background: url("../images/photos/photo3.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -309,7 +348,7 @@ footer p {
 
 .box4 {
 	height: 50%;
-	background: url("../images/photo4.jpg") no-repeat center center; 
+	background: url("../images/photos/photo4.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -320,7 +359,7 @@ footer p {
 
 .box5 {
 	height: 50%;
-	background: url("../images/photo5.jpg") no-repeat center center; 
+	background: url("../images/photos/photo9.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -329,7 +368,7 @@ footer p {
 
 .box6 {
 	height: 50%;
-	background: url("../images/photo6.jpg") no-repeat center center; 
+	background: url("../images/photos/photo8.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -340,7 +379,7 @@ footer p {
 
 .box7 {
 	height: 50%;
-	background: url("../images/photo7.jpg") no-repeat center center; 
+	background: url("../images/photos/photo17.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -349,7 +388,7 @@ footer p {
 
 .box8 {
 	height: 50%;
-	background: url("../images/photo8.jpg") no-repeat center center; 
+	background: url("../images/photos/photo18.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -360,7 +399,7 @@ footer p {
 
 .box9 {
 	height: 100%;
-	background: url("../images/photo9.jpg") no-repeat center center; 
+	background: url("../images/photos/photo.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -371,7 +410,7 @@ footer p {
 
 .box10 {
 	height: 100%;
-	background: url("../images/photo10.jpg") no-repeat center center; 
+	background: url("../images/photos/photo7.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -382,7 +421,7 @@ footer p {
 
 .box11 {
 	height: 100%;
-	background: url("../images/photo11.jpg") no-repeat center center; 
+	background: url("../images/photos/photo15.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -393,13 +432,222 @@ footer p {
 
 .box12 {
 	height: 100%;
-	background: url("../images/photo12.jpg") no-repeat center center; 
+	background: url("../images/photos/photo16.jpg") no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 
+/* Contenu de la colonne 9 */
+
+.box13 {
+	height: 100%;
+	background: url("../images/photos/photo5.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 10 */
+
+.box14 {
+	height: 100%;
+	background: url("../images/photos/photo11.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 11 */
+
+.box15 {
+	height: 100%;
+	background: url("../images/photos/photo14.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Slide 3 v.2 */
+
+ /* Colonnes */
+
+.col1-slide3 {
+	display: table-cell;
+	width: 450px;
+	height: 100%;
+}
+
+.col2-slide3 {
+	display: table-cell;
+	width: 500px;
+	height: 100%;
+}
+
+.col3-slide3 {
+	display: table-cell;
+	width: 500px;
+	height: 100%;
+}
+
+.col4-slide3 {
+	display: table-cell;
+	width: 500px;
+	height: 100%;
+}
+
+.col5-slide3 {
+	display: table-cell;
+	width: 550px;
+	height: 100%;
+}
+
+.col6-slide3 {
+	display: table-cell;
+	width: 550px;
+	height: 100%;
+}
+
+.col7-slide3 {
+	display: table-cell;
+	width: 300px;
+	height: 100%;
+}
+
+.col8-slide3 {
+	display: table-cell;
+	width: 400px;
+	height: 100%;
+}
+
+/* Contenu de la colonne 1 */
+
+.box1-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea10.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/* .box2-slide3 {
+	height: 50%;
+	background: url("../images/photos/photo13.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}  */
+
+/* Contenu de la colonne 2 */
+
+.box3-slide3 {
+	height: 50%;
+	background: url("../images/PAO/crea.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.box4-slide3 {
+	height: 50%;
+	background: url("../images/PAO/crea3.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 3 */
+
+.box5-slide3 {
+	height: 50%;
+	background: url("../images/PAO/crea7.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.box6-slide3 {
+	height: 50%;
+	background: url("../images/PAO/crea5.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 4 */
+
+.box7-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea4.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* .box8-slide3 {
+	height: 50%;
+	background: url("../images/photos/photo18.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} */
+
+/* Contenu de la colonne 5 */
+
+.box9-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea8.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 6 */
+
+.box10-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea2.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 7 */
+
+.box11-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea9.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Contenu de la colonne 8 */
+
+.box12-slide3 {
+	height: 100%;
+	background: url("../images/PAO/crea6.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
 /* Barre */
 
