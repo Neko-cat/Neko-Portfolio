@@ -286,6 +286,7 @@ footer p {
 	background-size: cover;
 }
 
+
 .box2 {
 	height: 30%;
 	background: url("../images/photo2.jpg") no-repeat center center; 
@@ -418,6 +419,7 @@ footer p {
 	-moz-border-radius-bottomright: 20px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
+	border: solid 1.75px dodgerblue;
 }
 
 .title h1 {
@@ -439,22 +441,26 @@ footer p {
 }
 
 .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover,.box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover {
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
+
 }
+
 	// Javascript class
 .box p{
 	display: block;
 	position: relative;
-	width: 100%;
+	width: 80%;
 	height: 20%;
 	top : 10%;
-	margin: 0;
+	margin: 0 auto;
 	padding: 5px;
-	border: solid 1px red;
-	color: white;
+	color: black;
 	opacity: 0;
-	background-color: black;
+	background-color: ghostwhite;
 	box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-top: solid 3px dodgerblue;
+	border-bottom: solid 3px dodgerblue;
+	text-align: center;
 }
