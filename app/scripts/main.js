@@ -12,7 +12,7 @@ $(function() {
 $(document).ready(function(){
 	'use strict';
 	// Help properly set the body width value.
-	var numberOfSlides	= 3;
+	var numberOfSlides	= 4;
 	// Slides Width in px
 	var minwidth		= 800;
 	var minheight		= 600;
@@ -29,6 +29,8 @@ $(document).ready(function(){
 		$('#slide2').css('height', $(window).height());
 		$('#slide3').css('width', $(window).width());
 		$('#slide3').css('height', $(window).height());
+		$('#slide4').css('width', $(window).width());
+		$('#slide4').css('height', $(window).height());
 		$('body').css('width', $(window).width() * numberOfSlides);
 	} else {
 		$('#slide1').css('width', minwidth);
@@ -37,6 +39,8 @@ $(document).ready(function(){
 		$('#slide2').css('height', minheight);
 		$('#slide3').css('width', minwidth);
 		$('#slide3').css('height', minheight);
+		$('#slide4').css('width', minwidth);
+		$('#slide4').css('height', minheight);
 		$('body').css('width', minwidth * numberOfSlides);
 	}
 		// Do the same on window resize
@@ -48,6 +52,8 @@ $(document).ready(function(){
 			$('#slide2').css('height', $(window).height());
 			$('#slide3').css('width', $(window).width());
 			$('#slide3').css('height', $(window).height());
+			$('#slide4').css('width', $(window).width());
+			$('#slide4').css('height', $(window).height());
 			$('body').css('width', $(window).width() * numberOfSlides);
 		} else {
 			$('#slide1').css('width', minwidth);
@@ -56,6 +62,8 @@ $(document).ready(function(){
 			$('#slide2').css('height', minheight);
 			$('#slide3').css('width', minwidth);
 			$('#slide3').css('height', minheight);
+			$('#slide4').css('width', minwidth);
+			$('#slide4').css('height', minheight);
 			$('body').css('width', minwidth * numberOfSlides);
 		}
 	});
@@ -153,8 +161,8 @@ $(document).ready(function(){
 });
 	// body background slideshow
 $.backstretch([
-	'images/bg.jpg',
-	'images/cat.jpg'
+	'images/BG/bg1.png',
+	'images/BG/bg2.jpg'
 ], {
 	fade: 2000,
 	duration: 10000

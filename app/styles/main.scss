@@ -20,10 +20,9 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-body{
-	// min-width: 2400px;
+.clear {
+	clear: both;
 }
-
 
 #test {
 	position: fixed;
@@ -51,7 +50,7 @@ body{
 *   Below this you can free your tortured mind. - Skull'
 */
 body {
-	width: 10000px;
+	width: 1000px;
 	margin: 0;
 	padding: 0;
 	box-sizing: content-box;
@@ -154,7 +153,6 @@ footer p {
 }
 
 #slide2 {
-	height: 800px;
 	float: left;
 	background-color: black;
 }
@@ -166,17 +164,6 @@ footer p {
 
 #slide4 {
 	float: left;
-	background-color: black;
-}
-
-#slide5 {
-	float: left;
-	background-color: black;
-}
-
-#slide6 {
-	float: left;
-	background-color: black;
 }
 
 /*
@@ -210,7 +197,7 @@ footer p {
 	list-style: none;
 }
 
-#menu li:nth-child(2), #menu li:nth-child(3), #menu li:nth-child(4), #menu li:nth-child(5) {
+#menu li:nth-child(2), #menu li:nth-child(3), #menu li:nth-child(4), {
 	box-shadow: 1px 0px 0 rgba(0,0,0,0.1) inset, 1px 0px 0 rgba(255,255,255,0.1);
 }
 
@@ -678,6 +665,96 @@ footer p {
 	vertical-align: top;
 }
 
+/* Slide 6 - About */
+
+#horizontal-box {
+	width: 80%;
+	height: 60%;
+	position: relative;
+	top: 21%;
+	left: 0px;
+	background-color: coral;
+	-webkit-border-top-right-radius: 1000px;
+	-webkit-border-bottom-right-radius: 1000px;
+	-moz-border-radius-topright: 1000px;
+	-moz-border-radius-bottomright: 1000px;
+	border-top-right-radius: 1000px;
+	border-bottom-right-radius: 1000px;
+	padding: 10px;
+	text-align: justify;
+	border: 3px solid bisque;
+	border-left: 3px solid transparent;
+}
+
+#horizontal-box h1 {
+	position: relative;
+	left: 37%;
+	color: bisque;
+}
+
+#horizontal-box h2 {
+	position: relative;
+	color: firebrick;
+}
+
+#col-me h2, #col-cv h2  {
+	left: 44%;
+}
+
+#col-code h2 {
+	left: 39%;
+}
+
+#col-contact h2 {
+	left: 33%;
+}
+
+#col-me, #col-code, #col-contact, #col-cv {
+	float: left;
+	width: 20%;
+	height: 60%;
+/* 	background-color: red; */
+	margin-top: 25px;
+	border: 10px solid transparent;
+}
+
+.rond2 {
+	border-radius: 50%;
+/* 	background-color: darkred; */
+	width: 75px;
+	height: 75px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 3px solid bisque;
+}
+
+#col-me .rond2 {
+	background-image: url('../images/About/avatar2.jpg');
+}
+
+#col-code .rond2 {
+	background-image: url('../images/About/code.png');
+}
+
+#col-cv .rond2 {
+	background-image: url('../images/About/photo17.jpg');
+}
+
+#col-contact .rond2 {
+	background-image: url('../images/About/photo.jpg');
+}
+
+.rond2:hover {
+	opacity: 0.8;
+	border: 3px solid firebrick;
+}
+
+hr {
+	width: 75%;
+	position: relative;
+	left: -10%;
+}
+
 /* Anim CSS */
 
 .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12 {
@@ -712,3 +789,4 @@ footer p {
 	border-bottom: solid 3px dodgerblue;
 	text-align: center;
 }
+
