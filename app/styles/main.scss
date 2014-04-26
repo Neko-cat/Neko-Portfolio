@@ -669,7 +669,7 @@ footer p {
 
 #horizontal-box {
 	width: 80%;
-	height: 60%;
+	height: 680px;
 	position: relative;
 	top: 21%;
 	left: 0px;
@@ -684,43 +684,40 @@ footer p {
 	text-align: justify;
 	border: 3px solid bisque;
 	border-left: 3px solid transparent;
-}
+} 
 
 #horizontal-box h1 {
-	position: relative;
-	left: 37%;
+	text-align: center;
 	color: bisque;
-}
-
+} 
+ 
 #horizontal-box h2 {
 	position: relative;
 	color: firebrick;
-}
+} 
 
 #col-me h2, #col-cv h2  {
 	left: 44%;
-}
+} 
 
 #col-code h2 {
 	left: 39%;
-}
+} 
 
 #col-contact h2 {
 	left: 33%;
-}
+} 
 
 #col-me, #col-code, #col-contact, #col-cv {
 	float: left;
 	width: 20%;
 	height: 60%;
-/* 	background-color: red; */
 	margin-top: 25px;
 	border: 10px solid transparent;
-}
+} 
 
 .rond2 {
 	border-radius: 50%;
-/* 	background-color: darkred; */
 	width: 75px;
 	height: 75px;
 	margin: 0 auto;
@@ -753,7 +750,7 @@ hr {
 	width: 75%;
 	position: relative;
 	left: -10%;
-}
+} 
 
 /* Anim CSS */
 
