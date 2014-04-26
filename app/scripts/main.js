@@ -157,7 +157,51 @@ $(document).ready(function(){
 		$(this).children().stop().fadeTo(1000, 0);
 	});
 
+	/*
+	*	Fancybox
+	*	https://github.com/fancyapps/fancyBox
+	*/
 
+	// Fancybox photography slide
+	$('.photography').fancybox({
+		beforeShow : function() {
+			// Disable right click
+			$.fancybox.wrap.bind('contextemenu',function(e){ return false; });
+		},
+		afterLoad : function() {
+			this.title = '<a href="' + this.href +'">Télécharger </a>' + this.title;
+		},
+		// Animation effect ('elastic', 'fade' or 'none')
+		openEffect	: 'fade',
+		closeEffect : 'fade',
+		prevEffect	: 'fade',
+		nextEffect	: 'fade',
+		// Time it takes to complete the transition
+		openSpeed	: '5000',
+		closeSpeed	: '5000',
+		nextSpeed	: '5000',
+		prevSpeed	: '5000', 
+		// Easing method for each transition type : Default value: 'swing'
+		openEasing	: 'swing',
+		closeEasing	: 'swing',
+		nextEasing	: 'swing',
+		prevEasing	: 'swing',
+		// Make borderless
+		padding 	: 0,
+		// Make navigation outside the content area
+		// margin : [20, 60, 20, 60],
+		helpers 	: {
+			// 'float', 'inside', 'outside' or 'over'
+			title	: {
+				type : 'float'
+			},
+			overlay : {
+				css : {
+					'background' : 'rgba(0, 0, 0, 0.8)'
+				}
+			}
+		}
+	});
 });
 	// body background slideshow
 $.backstretch([

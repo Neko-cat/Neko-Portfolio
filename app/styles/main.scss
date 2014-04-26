@@ -79,8 +79,8 @@ a {
 	margin: 0;
 	text-decoration: none;
 	padding: 0;
-	color: red;
 }
+
 #bandelette {
 	padding: 7px;
 	padding-bottom: 100px;
@@ -234,11 +234,11 @@ footer p {
 }
 
  /* Colonnes */
-
 .col1 {
 	display: table-cell;
 	width: 450px;
 	height: 100%;
+	padding: 0;
 }
 
 .col2 {
@@ -326,7 +326,7 @@ footer p {
 
 .box3 {
 	height: 50%;
-	background: url("../images/photos/photo3.jpg") no-repeat center center; 
+	background: url("../images/photos/photo3.jpg") no-repeat center center;  
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -522,16 +522,6 @@ footer p {
 	background-size: cover;
 }
 
-
-/* .box2-slide3 {
-	height: 50%;
-	background: url("../images/photos/photo13.jpg") no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}  */
-
 /* Contenu de la colonne 2 */
 
 .box3-slide3 {
@@ -583,14 +573,6 @@ footer p {
 	background-size: cover;
 }
 
-/* .box8-slide3 {
-	height: 50%;
-	background: url("../images/photos/photo18.jpg") no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-} */
 
 /* Contenu de la colonne 5 */
 
@@ -755,18 +737,20 @@ hr {
 /* Anim CSS */
 
 .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12 {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover,.box8:hover, .box9:hover, .box10:hover, .box11:hover, .box12:hover {
-
 }
 
 	// Javascript class
+.box:hover {
+	cursor: pointer;
+}
 .box p{
 	display: block;
 	position: relative;
@@ -785,5 +769,25 @@ hr {
 	border-top: solid 3px dodgerblue;
 	border-bottom: solid 3px dodgerblue;
 	text-align: center;
+}
+
+/* 
+*	Fancybox
+*/
+// make navigation always visible and put them outside the area
+.fancybox-nav span {
+    visibility: visible;
+}
+
+.fancybox-nav {
+    width: 80px;
+}
+
+.fancybox-prev {
+    left: -80px;
+}
+
+.fancybox-next {
+    right: -80px;
 }
 
