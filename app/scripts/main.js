@@ -1,18 +1,37 @@
-/*
-*	First things first make the scroll go left.
-*/
 $(function() {
 	'use strict';
-	$('body, html').mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 60);
+	$('body, html').mousewheel(function(event, delta)
+	{
+	/*
+	*	First things first make the scroll go left.
+	*/
+		var deltaPage = (delta * 80);
+		this.scrollLeft -= deltaPage;
+
+	/*
+	*	Paralaxed element.
+	*/
+
+	// Make Slide1 background position move according to the scroll 
+	var deltaBgSlideOne = (delta * 2);
+	var $bgPosSlideOne = $('#slide1').css('background-position');
+	var splitedBgPosSlideOne = ($bgPosSlideOne).split('%');
+	if (splitedBgPosSlideOne[0] < 0) {
+		$('#slide1').css('background-position', '0% 50%');
+	} else {
+		$('#slide1').css('background-position', (splitedBgPosSlideOne[0] - deltaBgSlideOne) + '% 50%');
+
+	};
+
 		event.preventDefault();
 	});
+
 });
 
 $(document).ready(function(){
 	'use strict';
 	// Help properly set the body width value.
-	var numberOfSlides	= 3;
+	var numberOfSlides	= 4;
 	// Slides Width in px
 	var minwidth		= 800;
 	var minheight		= 600;
@@ -22,40 +41,32 @@ $(document).ready(function(){
 	*	Set the min width of each slide to 800px
 	* 		Yep that's dirty jQuery
 	*/
-	if ($(window).width() >= minwidth || $(window).height() >= minheight ) {
-		$('#slide1').css('width', $(window).width());
-		$('#slide1').css('height', $(window).height());
-		$('#slide2').css('width', $(window).width());
-		$('#slide2').css('height', $(window).height());
-		$('#slide3').css('width', $(window).width());
-		$('#slide3').css('height', $(window).height());
+	if ($(window).width() >= minwidth) {
+		$('#slide1').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide2').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide3').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide4').css({'width': $(window).width(), 'height': $(window).height()});
 		$('body').css('width', $(window).width() * numberOfSlides);
 	} else {
-		$('#slide1').css('width', minwidth);
-		$('#slide1').css('height', minheight);
-		$('#slide2').css('width', minwidth);
-		$('#slide2').css('height', minheight);
-		$('#slide3').css('width', minwidth);
-		$('#slide3').css('height', minheight);
+		$('#slide1').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide2').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide3').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide4').css({'width': minwidth, 'height': $(window).height()});
 		$('body').css('width', minwidth * numberOfSlides);
 	}
 		// Do the same on window resize
 	$(window).resize(function() {
 		if ($(window).width() >= minwidth ) {
-			$('#slide1').css('width', $(window).width());
-			$('#slide1').css('height', $(window).height());
-			$('#slide2').css('width', $(window).width());
-			$('#slide2').css('height', $(window).height());
-			$('#slide3').css('width', $(window).width());
-			$('#slide3').css('height', $(window).height());
+		$('#slide1').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide2').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide3').css({'width': $(window).width(), 'height': $(window).height()});
+		$('#slide4').css({'width': $(window).width(), 'height': $(window).height()});
 			$('body').css('width', $(window).width() * numberOfSlides);
 		} else {
-			$('#slide1').css('width', minwidth);
-			$('#slide1').css('height', minheight);
-			$('#slide2').css('width', minwidth);
-			$('#slide2').css('height', minheight);
-			$('#slide3').css('width', minwidth);
-			$('#slide3').css('height', minheight);
+		$('#slide1').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide2').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide3').css({'width': minwidth, 'height': $(window).height()});
+		$('#slide4').css({'width': minwidth, 'height': $(window).height()});
 			$('body').css('width', minwidth * numberOfSlides);
 		}
 	});
@@ -123,7 +134,7 @@ $(document).ready(function(){
 		slides.push($($(this).attr('href')));
 	});
 
-	$(window).scroll(function() {
+	$(window).mousewheel(function() {
 
 		var scrollLeft = $(this).scrollLeft() + ($(window).width() / 2);
 		for(var i in slides) {
@@ -149,13 +160,100 @@ $(document).ready(function(){
 		$(this).children().stop().fadeTo(1000, 0);
 	});
 
+	/*
+	*	Fancybox
+	*	https://github.com/fancyapps/fancyBox
+	*/
 
-});
-	// body background slideshow
-$.backstretch([
-	'images/bg.jpg',
-	'images/cat.jpg'
-], {
-	fade: 2000,
-	duration: 5000
+	// Fancybox photography slide
+	$('.photography').fancybox({
+		beforeShow : function() {
+			// Disable right click
+			$.fancybox.wrap.bind('contextemenu',function(e){ return false; });
+		},
+		afterLoad : function() {
+			this.title = '<a href="' + this.href +'">Télécharger </a>' + this.title;
+		},
+		// Animation effect ('elastic', 'fade' or 'none')
+		openEffect	: 'fade',
+		closeEffect : 'fade',
+		prevEffect	: 'fade',
+		nextEffect	: 'fade',
+		// Time it takes to complete the transition
+		openSpeed	: '5000',
+		closeSpeed	: '5000',
+		nextSpeed	: '5000',
+		prevSpeed	: '5000', 
+		// Easing method for each transition type : Default value: 'swing'
+		openEasing	: 'swing',
+		closeEasing	: 'swing',
+		nextEasing	: 'swing',
+		prevEasing	: 'swing',
+		// Make borderless
+		padding 	: 0,
+		// Make navigation outside the content area
+		// margin : [20, 60, 20, 60],
+		helpers 	: {
+			// 'float', 'inside', 'outside' or 'over'
+			title	: {
+				type : 'float'
+			},
+			overlay : {
+				css : {
+					'background' : 'rgba(0, 0, 0, 0.8)'
+				}
+			}
+		}
+	});
+
+	// Fancybox PAO slide
+	$('.pao').fancybox({
+		beforeShow : function() {
+			// Disable right click
+			$.fancybox.wrap.bind('contextemenu',function(e){ return false; });
+		},
+		afterLoad : function() {
+			this.title = '<a href="' + this.href +'">Télécharger </a>' + this.title;
+		},
+		// Animation effect ('elastic', 'fade' or 'none')
+		openEffect	: 'fade',
+		closeEffect : 'fade',
+		prevEffect	: 'fade',
+		nextEffect	: 'fade',
+		// Time it takes to complete the transition
+		openSpeed	: '5000',
+		closeSpeed	: '5000',
+		nextSpeed	: '5000',
+		prevSpeed	: '5000', 
+		// Easing method for each transition type : Default value: 'swing'
+		openEasing	: 'swing',
+		closeEasing	: 'swing',
+		nextEasing	: 'swing',
+		prevEasing	: 'swing',
+		// Make borderless
+		padding 	: 0,
+		// Make navigation outside the content area
+		// margin : [20, 60, 20, 60],
+		helpers 	: {
+			// 'float', 'inside', 'outside' or 'over'
+			title	: {
+				type : 'float'
+			},
+			overlay : {
+				css : {
+					'background' : 'rgba(0, 0, 0, 0.8)'
+				}
+			}
+		}
+	});
+
+
+	/*
+	*	"Backstreched" elements
+	*/
+	// $('#slide1').backstretch([
+	// 	'images/BG/bg1.png',
+	// 	'images/BG/bg2.jpg'
+	// ], {fade: 2000, duration: 5000});
+	
 });
