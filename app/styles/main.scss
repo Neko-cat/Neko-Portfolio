@@ -2,6 +2,7 @@
 
 // @import 'sass-bootstrap/lib/bootstrap';
 
+// FONT
 @font-face {
     font-family: 'King3,serif';
     src: url('Kingthings_Foundation.otf');
@@ -10,6 +11,32 @@
 @font-face {
     font-family: 'Dekar,serif';
     src: url('Dekar.ttf');
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1110px) {
+	.rond2 {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	.rond2 {
+		display: none;
+	}
+
+	#table-box h1 {
+		font-size: 30px;
+	}
+
+	#table-box2 h2 {
+		font-size: 18px;
+	}
+	
+	#table-box2 p {
+		font-size: 14px;
+	}
 }
 
 /*
@@ -197,7 +224,7 @@ footer p {
 	list-style: none;
 }
 
-#menu li:nth-child(2), #menu li:nth-child(3), #menu li:nth-child(4), {
+#menu li:nth-child(2), #menu li:nth-child(3) {
 	box-shadow: 1px 0px 0 rgba(0,0,0,0.1) inset, 1px 0px 0 rgba(255,255,255,0.1);
 }
 
@@ -649,54 +676,45 @@ footer p {
 
 /* Slide 6 - About */
 
-#horizontal-box {
+#table-box {
 	width: 80%;
-	height: 680px;
-	position: relative;
-	top: 21%;
-	left: 0px;
+	height: 60%;
 	background-color: coral;
+	position: relative;
+	top: 20%;
+	padding: 10px;
 	-webkit-border-top-right-radius: 1000px;
 	-webkit-border-bottom-right-radius: 1000px;
 	-moz-border-radius-topright: 1000px;
 	-moz-border-radius-bottomright: 1000px;
 	border-top-right-radius: 1000px;
 	border-bottom-right-radius: 1000px;
-	padding: 10px;
-	text-align: justify;
-	border: 3px solid bisque;
-	border-left: 3px solid transparent;
-} 
+}
 
-#horizontal-box h1 {
+#table-box h1 {
 	text-align: center;
-	color: bisque;
-} 
- 
-#horizontal-box h2 {
-	position: relative;
-	color: firebrick;
-} 
+}
 
-#col-me h2, #col-cv h2  {
-	left: 44%;
-} 
+#table-box hr {
+	width: 80%;
+}
 
-#col-code h2 {
-	left: 39%;
-} 
+#table-box2 {
+	display: table;
+	width: 100%;
+	height: 79%;
+}
 
-#col-contact h2 {
-	left: 33%;
-} 
-
-#col-me, #col-code, #col-contact, #col-cv {
-	float: left;
-	width: 20%;
-	height: 60%;
-	margin-top: 25px;
+#col-about, #col2-about, #col3-about, #col4-about {
+	display: table-cell;
+	width: 22%;
+	text-align: justify;
 	border: 10px solid transparent;
-} 
+}
+
+#col-about h2, #col2-about h2, #col3-about h2, #col4-about h2 {
+	text-align: center;
+}
 
 .rond2 {
 	border-radius: 50%;
@@ -707,32 +725,27 @@ footer p {
 	border: 3px solid bisque;
 }
 
-#col-me .rond2 {
+#col-about .rond2 {
 	background-image: url('../images/About/avatar2.jpg');
 }
 
-#col-code .rond2 {
+#col2-about .rond2 {
 	background-image: url('../images/About/code.png');
 }
 
-#col-cv .rond2 {
+#col3-about .rond2 {
 	background-image: url('../images/About/photo17.jpg');
 }
 
-#col-contact .rond2 {
+#col4-about .rond2 {
 	background-image: url('../images/About/photo.jpg');
-}
+} 
 
 .rond2:hover {
 	opacity: 0.8;
 	border: 3px solid firebrick;
 }
 
-hr {
-	width: 75%;
-	position: relative;
-	left: -10%;
-} 
 
 /* Anim CSS */
 
@@ -755,7 +768,6 @@ hr {
 	display: block;
 	position: relative;
 	width: 80%;
-	height: 20%;
 	top : 10%;
 	margin: 0 auto;
 	padding: 5px;
