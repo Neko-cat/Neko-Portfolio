@@ -679,7 +679,11 @@ footer p {
 	vertical-align: top;
 }
 
-/* Slide 6 - About */
+/* Slide 4- About */
+
+#slide4 {
+	background-image: url("../images/BG/bg2.jpg");
+}
 
 #table-box {
 	width: 80%;
@@ -694,6 +698,7 @@ footer p {
 	-moz-border-radius-bottomright: 1000px;
 	border-top-right-radius: 1000px;
 	border-bottom-right-radius: 1000px;
+
 }
 
 #table-box h1 {
